@@ -19,6 +19,9 @@ public interface StudentPopulator {
    })
     Student populateStudent(StudentDto studentDto);
 
+    @Mappings({
+            @Mapping(target = "landMark",source = "city")
+    })
     StudentDto populateStudentDto(Student student);
 
 

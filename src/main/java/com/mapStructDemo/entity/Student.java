@@ -9,10 +9,6 @@ import lombok.Setter;
 import java.util.Date;
 
 @Entity
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Getter
-//@Setter
 @Table(name="student_tbl")
 public class Student {
 
@@ -23,6 +19,7 @@ public class Student {
     private String lastName;
     private String rollNumber;
     private String city;
+    private String emailId;
     private Date creationDate;
 
     public Integer getId() {
@@ -73,16 +70,37 @@ public class Student {
         this.city = city;
     }
 
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
     public Student() {
     }
 
-    public Student(Integer id, String firstName, String lastName, String rollNumber, String city, Date creationDate) {
+    public Student(Integer id, String firstName, String lastName, String rollNumber, String city, String emailId, Date creationDate) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.rollNumber = rollNumber;
         this.city = city;
+        this.emailId = emailId;
         this.creationDate = creationDate;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", rollNumber='" + rollNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
+    }
 }
