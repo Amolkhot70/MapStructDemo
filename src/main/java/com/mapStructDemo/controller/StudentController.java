@@ -23,6 +23,7 @@ public class StudentController {
     private StudentService studentService;
 
 
+
     @PostMapping("/add")
     public ResponseEntity<Student> addStudent(@Validated({Default.class,UpdateValidationGroup.class}) @RequestBody StudentDto studentDto){
         Student student = this.studentService.addStudent(studentDto);

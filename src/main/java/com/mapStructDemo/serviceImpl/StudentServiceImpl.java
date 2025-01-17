@@ -17,6 +17,7 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
+
     @Override
     public List<StudentDto> fetchAllStudents() {
         List<Student> all = this.studentRepository.findAll();

@@ -10,5 +10,6 @@ public interface StudentService {
     List<StudentDto> fetchAllStudents();
     Student addStudent(StudentDto studentDto);
 
+
 }
 
